@@ -1,0 +1,8 @@
+prefix=/home/hrigroup/fyp/devel
+
+Name: global_planner
+Description: Description of global_planner
+Version: 1.14.7
+Cflags: -I/home/hrigroup/fyp/devel/include -I/home/hrigroup/fyp/src/navigation/global_planner/include
+Libs: -L${prefix}/lib -lglobal_planner
+Requires: costmap_2d dynamic_reconfigure geometry_msgs nav_core navfn nav_msgs pluginlib roscpp tf
