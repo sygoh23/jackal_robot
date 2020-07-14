@@ -67,14 +67,14 @@ set(amcl_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(amcl_SOURCE_PREFIX /home/hrigroup/fyp/src/navigation/amcl)
-  set(amcl_DEVEL_PREFIX /home/hrigroup/fyp/devel)
+  set(amcl_SOURCE_PREFIX /home/samuel/ws/jackal_robot/src/navigation/amcl)
+  set(amcl_DEVEL_PREFIX /home/samuel/ws/jackal_robot/devel)
   set(amcl_INSTALL_PREFIX "")
   set(amcl_PREFIX ${amcl_DEVEL_PREFIX})
 else()
   set(amcl_SOURCE_PREFIX "")
   set(amcl_DEVEL_PREFIX "")
-  set(amcl_INSTALL_PREFIX /home/hrigroup/fyp/install)
+  set(amcl_INSTALL_PREFIX /home/samuel/ws/jackal_robot/install)
   set(amcl_PREFIX ${amcl_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(amcl_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/hrigroup/fyp/devel/include;/home/hrigroup/fyp/src/navigation/amcl/include " STREQUAL " ")
+if(NOT "/home/samuel/ws/jackal_robot/devel/include;/home/samuel/ws/jackal_robot/src/navigation/amcl/include " STREQUAL " ")
   set(amcl_INCLUDE_DIRS "")
-  set(_include_dirs "/home/hrigroup/fyp/devel/include;/home/hrigroup/fyp/src/navigation/amcl/include")
+  set(_include_dirs "/home/samuel/ws/jackal_robot/devel/include;/home/samuel/ws/jackal_robot/src/navigation/amcl/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://wiki.ros.org/amcl " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/hrigroup/fyp/devel/include;/home/hrigroup/fyp/src/navigation/amcl/
         message(FATAL_ERROR "Project 'amcl' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'amcl' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/hrigroup/fyp/src/navigation/amcl/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'amcl' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/samuel/ws/jackal_robot/src/navigation/amcl/${idir}'.  ${_report}")
     endif()
     _list_append_unique(amcl_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/hrigroup/fyp/devel/lib;/home/administrator/catkin_ws/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/samuel/ws/jackal_robot/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

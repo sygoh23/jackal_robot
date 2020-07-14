@@ -1,8 +1,8 @@
-prefix=/home/hrigroup/fyp/devel
+prefix=/home/samuel/ws/jackal_robot/devel
 
 Name: amcl
 Description: Description of amcl
 Version: 1.14.7
-Cflags: -I/home/hrigroup/fyp/devel/include -I/home/hrigroup/fyp/src/navigation/amcl/include
+Cflags: -I/home/samuel/ws/jackal_robot/devel/include -I/home/samuel/ws/jackal_robot/src/navigation/amcl/include
 Libs: -L${prefix}/lib -lamcl_sensors -lamcl_map -lamcl_pf
 Requires: rosbag roscpp dynamic_reconfigure tf nav_msgs std_srvs

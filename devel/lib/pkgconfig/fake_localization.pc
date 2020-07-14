@@ -1,4 +1,4 @@
-prefix=/home/hrigroup/fyp/devel
+prefix=/home/samuel/ws/jackal_robot/devel
 
 Name: fake_localization
 Description: Description of fake_localization

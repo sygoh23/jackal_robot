@@ -1,8 +1,8 @@
-prefix=/home/hrigroup/fyp/devel
+prefix=/home/samuel/ws/jackal_robot/devel
 
 Name: map_msgs
 Description: Description of map_msgs
 Version: 1.14.0
-Cflags: -I/home/hrigroup/fyp/devel/include
+Cflags: -I/home/samuel/ws/jackal_robot/devel/include
 Libs: -L${prefix}/lib 
 Requires: message_runtime nav_msgs sensor_msgs std_msgs
